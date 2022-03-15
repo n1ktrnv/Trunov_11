@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,Text,Image,ImagBackground, ImageBackground} from 'react-native';
+import {View, Text, Image, ImageBackground, Share} from 'react-native';
 import Icon from "@expo/vector-icons/Entypo"
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
@@ -11,6 +11,15 @@ export default class Posts extends React.Component{
     onLike=()=>{
         this.setState({liked:!this.state.liked})
     }
+    onShare = async () => {
+        try {
+            const result = await Share.share({
+                message: 'Социальная сеть для просмотра фотографий своих друзей',
+            });
+        } catch (error) {
+            alert(error.message);
+        }
+    };
     render(){
 
         const {name,profile,photo,onPress} = this.props
@@ -46,7 +55,7 @@ export default class Posts extends React.Component{
                             fontSize:12,
                             color:"#9ca1a2"
                         }}>
-                            2 mins ago
+                            2 минуты назад
                         </Text>
                     </View>
                     <View style={{
@@ -61,12 +70,14 @@ export default class Posts extends React.Component{
                     </View>
                </View>
 
-               <View style={{
-                   flexDirection:"row",
-                   width:"100%",
-                   paddingTop:20
-               }}>
-                    <ImageBackground 
+               <View
+                   style={{
+                       flexDirection:"row",
+                       width:"100%",
+                       paddingTop:20,
+                   }}
+               >
+                    <ImageBackground
                     source={photo}
                     style={{
                         width:"100%",
@@ -76,14 +87,13 @@ export default class Posts extends React.Component{
                         borderRadius:30
                     }}
                     >
-                        <View style={{
+                        <TouchableOpacity style={{
                             height:"100%",
                             flexDirection:"row",
                             alignItems:'flex-end',
-                            justifyContent:"flex-end"
-                        }}>
-
-
+                            justifyContent:"flex-end",
+                        }}
+                        onPress={this.onShare}>
                             <TouchableOpacity
                                 onPress={onPress}
                                 style={{
@@ -97,7 +107,6 @@ export default class Posts extends React.Component{
                                 color="#044244"
                                 size={20}/>
                             </TouchableOpacity>
-
 
                             <TouchableOpacity
                                 onPress={this.onLike}
@@ -115,7 +124,7 @@ export default class Posts extends React.Component{
                                 size={20}/>
                             </TouchableOpacity>
 
-                        </View>
+                        </TouchableOpacity>
                     </ImageBackground>
                </View>
             </View>

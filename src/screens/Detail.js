@@ -13,7 +13,7 @@ export default class Detail extends React.Component{
     render(){
         return(
             <View style={{
-                backgroundColor:"#044244",
+                backgroundColor:"#00716F",
                 height:"100%",
             }}>
                 <View style={{
@@ -69,7 +69,7 @@ export default class Detail extends React.Component{
                         color:"#044244",
                         alignSelf:"center"
                     }}>
-                        Ksenia Bator
+                        Сергей Брин
                     </Text>
                     <Text style={{
                         fontFamily:"Medium",
@@ -77,7 +77,7 @@ export default class Detail extends React.Component{
                         color:"#9ca1a2",
                         alignSelf:"center"
                     }}>
-                        Kiev, Ukraine
+                        Калифорния, США
                     </Text>
 
                     
@@ -99,7 +99,7 @@ export default class Detail extends React.Component{
                                     color:"#9ca1a2",
                                     alignSelf:"center"
                                 }}>
-                                    photos
+                                    фото
                                 </Text>
                         </View>
 
@@ -109,14 +109,14 @@ export default class Detail extends React.Component{
                                     fontSize:15,
                                     color:"#044244",
                                     alignSelf:"center"
-                                }}>2,107</Text>
+                                }}>2 107</Text>
                                 <Text style={{
                                     fontFamily:"Medium",
                                     fontSize:16,
                                     color:"#9ca1a2",
                                     alignSelf:"center"
                                 }}>
-                                    followers
+                                    подписчиков
                                 </Text>
                         </View>
 
@@ -134,7 +134,7 @@ export default class Detail extends React.Component{
                                     color:"#9ca1a2",
                                     alignSelf:"center"
                                 }}>
-                                    follows
+                                    подписок
                                 </Text>
                         </View>
                     </View>
@@ -149,21 +149,21 @@ export default class Detail extends React.Component{
                     <TouchableOpacity
                         onPress={this.onTabPressed}
                         style={{
-                            borderBottomColor: this.state.collectionSelected ? "#FFF":"#044244",
+                            borderBottomColor: this.state.collectionSelected ? "#FFF":"#004f4e",
                             borderBottomWidth:4,
                             paddingVertical:6,
                         }}
                     >
                         <Text style={{
                             fontFamily:"Bold",
-                            color:this.state.collectionSelected ? "#FFF":"#9ca1a2"
-                        }}>COLLECTIONS</Text>
+                            color:this.state.collectionSelected ? "#FFF":"#004f4e"
+                        }}>КОЛЛЕКЦИИ</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         onPress={this.onTabPressed}
                         style={{
-                            borderBottomColor: this.state.collectionSelected ? "#044244":"#FFF",
+                            borderBottomColor: this.state.collectionSelected ? "#004f4e":"#FFF",
                             borderBottomWidth:4,
                             paddingVertical:6,
                             marginLeft:30
@@ -171,15 +171,15 @@ export default class Detail extends React.Component{
                     >
                         <Text style={{
                             fontFamily:"Bold",
-                            color:this.state.collectionSelected ? "#9ca1a2":"#FFF"
-                        }}>FEATURED</Text>
+                            color:this.state.collectionSelected ? "#004f4e":"#FFF"
+                        }}>РЕКОМЕНДУЕМЫЕ</Text>
                     </TouchableOpacity>
                 </View>
 
 
                 <View style={{flexDirection:"row"}}>
                     <View style={{
-                        backgroundColor:"#728c8e",
+                        backgroundColor:"#004f4e",
                         height:260,
                         width:280,
                         marginHorizontal:40,
@@ -208,7 +208,7 @@ export default class Detail extends React.Component{
                                         borderRadius:10,
                                         padding:8,
                                         marginRight:20,
-                                        backgroundColor:"#6f8d90"
+                                        backgroundColor:"#004f4e"
                                     }}>
                                             <Icon
                                                 name="edit"
@@ -227,13 +227,13 @@ export default class Detail extends React.Component{
                                 fontFamily:"Bold",
                                 color:"#FFF",
                                 fontSize:15
-                            }}>Nature Collections</Text>
+                            }}>Новые разработки</Text>
                             <Text style={{
                                 fontFamily:"Medium",
                                 color:"#dedede",
                                 fontSize:12
                             }}>
-                                1,003 photos
+                                1 003 фото
                             </Text>
                         </View>
                     </View>

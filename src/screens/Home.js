@@ -18,7 +18,7 @@ export default class Home extends React.Component{
             showsVerticalScrollIndicator={false}
             style={{
                 height:"100%",
-                backgroundColor:"#044244"
+                backgroundColor:"#00716F"
             }}
           >
               <View style={{
@@ -35,8 +35,6 @@ export default class Home extends React.Component{
                       <View style={{
                           width:"50%"
                       }}>
-                          <Image source={require('../images/Untitled.png')}
-                            style={{width:20,height:20}}/>
                       </View>
                       <View style={{
                           width:"50%",
@@ -58,29 +56,30 @@ export default class Home extends React.Component{
                     fontSize:25,
                     color:"#FFF",
                     paddingVertical:25
-                }}>Find Awesome Photos</Text>
+                }}>Найти фотографии и альбомы друзей</Text>
 
                 <View style={{
                     flexDirection:"row",
-                    borderColor:"#9ca1a2",
+                    borderColor:"white",
                     borderRadius:20,
                     borderWidth:0.2,
                     paddingVertical:5,
                     alignItems:"center"
                 }}>
                     <TextInput
-                        placeholder="search inispiration ..."
+                        placeholder="поиск..."
+                        placeholderTextColor="white"
                         style={{
                             paddingHorizontal:20,
                             fontFamily:"Medium",
                             fontSize:11,
                             width:"90%",
-                            color:"#9ca1a2"
+                            color: "white"
                         }}
                     />
                     <Icon name="magnifying-glass"
                           size={15}
-                          color="#9ca1a2"/>
+                          color="white"/>
                 </View>
 
               </View>
@@ -99,22 +98,22 @@ export default class Home extends React.Component{
                       <TouchableOpacity
                         onPress={this.onTabPressed}
                         style={{
-                            borderBottomColor:this.state.popularSelected ? "#044244":"#FFF",
+                            borderBottomColor:this.state.popularSelected ? "#00716F":"#FFF",
                             borderBottomWidth:4,
                             paddingVertical:6
                         }}
                       >
                           <Text style={{
                               fontFamily:"Bold",
-                              color:this.state.popularSelected ? "#044244":"#9ca1a2"
-                          }}>MOST POPULAR</Text>
+                              color:this.state.popularSelected ? "#00716F":"#9ca1a2"
+                          }}>САМЫЕ ПОПУЛЯРНЫЕ</Text>
                       </TouchableOpacity>
 
 
                       <TouchableOpacity
                         onPress={this.onTabPressed}
                         style={{
-                            borderBottomColor:this.state.popularSelected ? "#FFF":"#044244",
+                            borderBottomColor:this.state.popularSelected ? "#FFF":"#00716F",
                             borderBottomWidth:4,
                             paddingVertical:6,
                             marginLeft:30
@@ -122,8 +121,8 @@ export default class Home extends React.Component{
                       >
                           <Text style={{
                               fontFamily:"Bold",
-                              color:this.state.popularSelected ? "#9ca1a2":"#044244"
-                          }}>RECENT</Text>
+                              color:this.state.popularSelected ? "#9ca1a2":"#00716F"
+                          }}>ПОСЛЕДНИЕ</Text>
                       </TouchableOpacity>
                   </View>
 
@@ -132,14 +131,14 @@ export default class Home extends React.Component{
                   }}>
                       <Posts
                         onPress={()=>this.props.navigation.navigate('Detail')}
-                        name="Max Bator"
+                        name="Билл Гейтс"
                         profile={require('../images/p1.jpg')}
                         photo={require('../images/5.jpg')}
                       />
 
                       <View style={{
                           height:160,
-                          backgroundColor:"#3c636c",
+                          backgroundColor:"#00716F",
                           width:20,
                           marginLeft:20,
                           marginTop:120,
@@ -159,7 +158,7 @@ export default class Home extends React.Component{
                      
                       <View style={{
                           height:160,
-                          backgroundColor:"#3c636c",
+                          backgroundColor:"#00716F",
                           width:20,
                           marginLeft:-40,
                           marginRight:20,
@@ -172,7 +171,7 @@ export default class Home extends React.Component{
 
                       <Posts
                         onPress={()=>this.props.navigation.navigate('Detail')}
-                        name="Erka Berka"
+                        name="Сергей Брин"
                         profile={require('../images/p2.jpg')}
                         photo={require('../images/6.jpg')}
                       />
@@ -184,14 +183,14 @@ export default class Home extends React.Component{
                   }}>
                       <Posts
                         onPress={()=>this.props.navigation.navigate('Detail')}
-                        name="Max Bator"
-                        profile={require('../images/p1.jpg')}
+                        name="Стив Джобс"
+                        profile={require('../images/p3.jpg')}
                         photo={require('../images/3.jpg')}
                       />
 
                       <View style={{
                           height:160,
-                          backgroundColor:"#3c636c",
+                          backgroundColor:"#00716F",
                           width:20,
                           marginLeft:20,
                           marginTop:120,
